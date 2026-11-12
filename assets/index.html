@@ -1,99 +1,51 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111827">
-<title>متجري الذكي | رابطتي</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
-:root{--navy:#111827;--pink:#ec4899;--bg:#f4f6fb;--muted:#64748b;--line:#e5e7eb}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:'Cairo',sans-serif;color:#172033}
-header{background:linear-gradient(120deg,#111827,#26334d);color:#fff;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
-header h1{font-size:22px;margin:0}header p{margin:4px 0 0;color:#cbd5e1;font-size:13px}
-.wrap{max-width:1100px;margin:24px auto;padding:0 16px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 5px 18px #0f172a08}
-.stat small{color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:6px}
-.layout{display:grid;grid-template-columns: minmax(260px, .8fr) 1.4fr;gap:16px}
-h2{font-size:17px;margin:0 0 14px}.field{margin:10px 0}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
-input,textarea,select{width:100%;border:1px solid #d8deea;border-radius:10px;padding:11px;font:inherit;background:#fff}
-textarea{min-height:85px;resize:vertical}
-button{border:0;border-radius:10px;padding:10px 15px;font:inherit;font-weight:700;cursor:pointer}
-.primary{background:var(--pink);color:white}.secondary{background:#eef2f7;color:#26334d}.danger{background:#fee2e2;color:#991b1b}
-.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:right;padding:11px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-weight:700}
-.empty{text-align:center;color:var(--muted);padding:25px}
-.notice{font-size:12px;color:var(--muted);line-height:1.8;margin-top:12px}
-.pill{display:inline-block;padding:3px 9px;border-radius:20px;background:#fce7f3;color:#9d174d;font-size:11px}
-@media(max-width:760px){.layout{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats .card:last-child{grid-column:1/-1}header{padding:18px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>متجر أبو راشد – رابطتي</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0f172a;--panel:#1e293b;--panel2:#0b1220;--line:#334155;--pink:#db2777;--pink2:#ec4899;--green:#059669;--muted:#94a3b8;--white:#f8fafc}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Tahoma,Arial,sans-serif;line-height:1.6}button,input{font:inherit}button{cursor:pointer;border:0}header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px max(16px,calc((100% - 1050px)/2));background:#0b1220;border-bottom:1px solid #1e293b}.brand{display:flex;align-items:center;gap:10px;cursor:pointer}.logo{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--pink);font-weight:bold;font-size:20px}.brand strong{color:var(--pink2);font-size:18px}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav button,.secondary{background:var(--panel);color:#e2e8f0;border:1px solid var(--line);padding:8px 12px;border-radius:9px;font-size:13px}.nav button:hover,.secondary:hover{border-color:var(--pink2)}main{max-width:1050px;margin:auto;padding:20px 16px 230px}.hero{text-align:center;margin:15px 0 25px}.hero h1{font-size:25px;margin:0 0 5px}.muted{color:var(--muted)}.small{font-size:13px}.search{width:min(100%,480px);margin-top:15px;background:var(--panel);border:1px solid var(--line);padding:11px 15px;border-radius:24px;color:white;outline:none}.search:focus,input:focus{border-color:var(--pink2)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.product{display:flex;flex-direction:column;justify-content:space-between;min-height:210px}.pill{display:inline-block;background:#83184366;color:#f9a8d4;border-radius:20px;padding:3px 9px;font-size:11px;font-weight:bold}.product h3{margin:10px 0 5px;font-size:17px}.product p{margin:0;color:var(--muted);font-size:13px}.price{color:#34d399;font-weight:bold}.product-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.primary{background:var(--pink);color:white;padding:9px 13px;border-radius:9px;font-weight:bold;font-size:13px}.primary:hover{background:var(--pink2)}.green{background:var(--green)}.green:hover{background:#10b981}.danger{color:#fca5a5;background:transparent;padding:4px}.empty{text-align:center;padding:30px;color:var(--muted)}.cart{position:fixed;z-index:4;bottom:0;left:0;right:0;width:min(100%,580px);max-height:70vh;overflow:auto;margin:auto;background:#0b1220;border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;padding:14px 16px;box-shadow:0 -10px 35px #0008}.cart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.cart-items{max-height:100px;overflow:auto;margin-bottom:10px}.cart-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:3px 0;font-size:12px}.transfer{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:9px;font-size:12px;margin:9px 0}.field{width:100%;background:var(--panel2);border:1px solid var(--line);color:white;border-radius:9px;padding:10px;margin:5px 0 9px;outline:none}.wide{width:100%}.box{max-width:520px;margin:18px auto}.box h2{margin:0 0 14px}.order{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:13px;margin-top:12px}.order-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.status{font-size:11px;padding:3px 8px;border-radius:20px;background:#713f12;color:#fde68a}.status.approved{background:#064e3b;color:#a7f3d0}.item-line{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;padding:6px 0}.download{background:var(--green);color:white;padding:5px 9px;border-radius:7px;text-decoration:none}.admin-order{display:flex;justify-content:space-between;align-items:center;gap:10px}.hint{font-size:11px;color:var(--muted);margin-top:10px}.toast{position:fixed;top:75px;left:50%;transform:translateX(-50%);z-index:10;background:#064e3b;color:#d1fae5;padding:10px 16px;border-radius:10px;box-shadow:0 5px 25px #0007}.hidden{display:none!important}
+    @media(max-width:700px){.grid{grid-template-columns:1fr}.product{min-height:unset}.brand strong{font-size:15px}.nav button{font-size:12px;padding:7px 9px}.hero h1{font-size:21px}}@media(min-width:500px) and (max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
 </head>
 <body>
-<header>
- <div><h1>متجري الذكي</h1><p>لوحة إدارة المنتجات الرقمية — رابطتي / السويدي بروبنت</p></div>
- <span class="pill">نسخة أولية قابلة للتطوير</span>
-</header>
-<main class="wrap">
- <section class="stats">
-  <div class="card stat"><small>عدد المنتجات</small><strong id="countProducts">0</strong></div>
-  <div class="card stat"><small>قيمة المنتجات المعروضة</small><strong id="totalValue">0 ر.ي</strong></div>
-  <div class="card stat"><small>العملة</small><strong>الريال اليمني</strong></div>
- </section>
- <section class="layout">
-  <div class="card">
-   <h2 id="formTitle">إضافة منتج رقمي</h2>
-   <form id="productForm">
-    <input type="hidden" id="editId">
-    <div class="field"><label for="name">اسم المنتج</label><input id="name" required maxlength="100" placeholder="مثال: دليل التجارة الرقمية"></div>
-    <div class="field"><label for="description">وصف المنتج</label><textarea id="description" placeholder="اكتب وصفاً واضحاً ومفيداً للعميل"></textarea></div>
-    <div class="field"><label for="price">السعر بالريال اليمني</label><input id="price" type="number" min="0" step="1" required placeholder="500"></div>
-    <div class="field"><label for="fileName">اسم ملف PDF (اختياري)</label><input id="fileName" placeholder="guide.pdf"></div>
-    <div class="actions"><button class="primary" type="submit">حفظ المنتج</button><button class="secondary" type="reset" id="cancelEdit">مسح الحقول</button></div>
-   </form>
-   <p class="notice">هذه النسخة تحفظ بياناتها داخل متصفح الجهاز فقط. لا تضع مفاتيح API أو كلمات مرور هنا. الربط الفعلي بقاعدة بيانات المتجر والدفع والنشر يحتاج إعداد خادم آمن.</p>
-  </div>
-  <div class="card">
-   <h2>إدارة المنتجات</h2>
-   <div style="overflow-x:auto">
-    <table><thead><tr><th>المنتج</th><th>السعر</th><th>الملف</th><th>الإجراءات</th></tr></thead><tbody id="productsBody"></tbody></table>
-    <div id="empty" class="empty">لا توجد منتجات بعد. أضف أول منتج من النموذج.</div>
-   </div>
-  </div>
- </section>
-</main>
-<script>
-const KEY='rabitati_smart_manager_products_v1';
-let products=[];
-try { products=JSON.parse(localStorage.getItem(KEY)||'[]'); if(!Array.isArray(products)) products=[]; } catch(e){ products=[]; }
-const $=id=>document.getElementById(id);
-const money=n=>new Intl.NumberFormat('ar-YE').format(Number(n)||0)+' ر.ي';
-function persist(){localStorage.setItem(KEY,JSON.stringify(products));render();}
-function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function render(){
- $('countProducts').textContent=products.length;
- $('totalValue').textContent=money(products.reduce((a,p)=>a+(Number(p.price)||0),0));
- $('empty').style.display=products.length?'none':'block';
- $('productsBody').innerHTML=products.map(p=>`<tr><td><strong>${safe(p.name)}</strong><br><span style="color:#64748b">${safe(p.description||'')}</span></td><td>${money(p.price)}</td><td>${safe(p.fileName||'—')}</td><td><div class="actions"><button class="secondary" onclick="editProduct('${p.id}')">تعديل</button><button class="danger" onclick="deleteProduct('${p.id}')">حذف</button></div></td></tr>`).join('');
-}
-$('productForm').addEventListener('submit',e=>{
- e.preventDefault();
- const id=$('editId').value;
- const item={id:id||String(Date.now()),name:$('name').value.trim(),description:$('description').value.trim(),price:Number($('price').value),fileName:$('fileName').value.trim()};
- if(!item.name||!Number.isFinite(item.price)||item.price<0)return;
- if(id){products=products.map(p=>p.id===id?item:p);}else{products.unshift(item);}
- $('productForm').reset();$('editId').value='';$('formTitle').textContent='إضافة منتج رقمي';persist();
-});
-window.editProduct=id=>{
- const p=products.find(x=>x.id===id);if(!p)return;
- $('editId').value=p.id;$('name').value=p.name;$('description').value=p.description||'';$('price').value=p.price;$('fileName').value=p.fileName||'';
- $('formTitle').textContent='تعديل المنتج';window.scrollTo({top:0,behavior:'smooth'});
-};
-window.deleteProduct=id=>{
- if(!confirm('هل تريد حذف هذا المنتج من بيانات هذه اللوحة؟'))return;
- products=products.filter(p=>p.id!==id);persist();
-};
-$('cancelEdit').addEventListener('click',()=>{setTimeout(()=>{$('editId').value='';$('formTitle').textContent='إضافة منتج رقمي';},0)});
-render();
-</script>
-</body></html>
+  <header>
+    <div class="brand" onclick="showView('store')"><div class="logo">ر</div><strong>أبو راشد – رابطتي</strong></div>
+    <nav class="nav"><button onclick="showView('tracking')">🚚 متابعة الطلب</button><button onclick="showView('admin')">🛡 الإدارة</button></nav>
+  </header>
+  <main id="main"></main>
+  <div id="cartRoot"></div>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script>
+    'use strict';
+    const KEY_PRODUCTS='rabitati_products',KEY_ORDERS='rabitati_orders';
+    const initialProducts=[
+      {id:1,name:'دليل شبكات الطاقة الشمسية 12V',category:'PDF',price:4500,desc:'شرح شامل لتصميم وتوصيل أنظمة الطاقة الشمسية والانفرتر للمنازل.',file:'solar_guide.pdf'},
+      {id:2,name:'حزمة أدوات وسكربتات تطوير الويب',category:'ZIP',price:7500,desc:'مجموعة قوالب وأكواد جاهزة للمطورين وأصحاب المواقع.',file:'dev_toolkit.zip'},
+      {id:3,name:'قوالب عقود وتمديدات كهربائية',category:'DOCX',price:3000,desc:'نماذج جاهزة للتعديل لعقود ومواصفات التمديدات السكنية.',file:'electrical_contracts.docx'}
+    ];
+    function load(key,fallback){try{const value=JSON.parse(localStorage.getItem(key));return Array.isArray(value)?value:fallback}catch(_){return fallback}}
+    let products=load(KEY_PRODUCTS,initialProducts),orders=load(KEY_ORDERS,[]),cart=[],view='store',search='',trackQuery='',isAdmin=false;
+    const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const money=value=>new Intl.NumberFormat('ar-YE').format(Number(value)||0)+' ر.ي';
+    function save(){try{localStorage.setItem(KEY_PRODUCTS,JSON.stringify(products));localStorage.setItem(KEY_ORDERS,JSON.stringify(orders))}catch(_){notify('تعذر حفظ البيانات على هذا الجهاز.')}}
+    function notify(message){const el=document.getElementById('toast');el.textContent=message;el.classList.remove('hidden');setTimeout(()=>el.classList.add('hidden'),3200)}
+    function showView(next){view=next;render()}
+    function addToCart(id){const p=products.find(item=>String(item.id)===String(id));if(p){cart.push({...p});render();notify('تمت إضافة المنتج إلى السلة')}}
+    function removeFromCart(index){cart.splice(index,1);render()}
+    function checkout(){const receipt=document.getElementById('receipt').value.trim();if(!cart.length)return notify('السلة فارغة!');if(!receipt)return notify('يرجى إدخال رقم إشعار التحويل عبر الكريمي');const order={id:'RBT-'+Math.floor(1000+Math.random()*9000),items:cart.map(x=>({...x})),total:cart.reduce((sum,item)=>sum+Number(item.price||0),0),receipt,status:'pending',date:new Intl.DateTimeFormat('ar-YE').format(new Date())};orders.unshift(order);save();cart=[];render();notify('تم إرسال الطلب بنجاح! رقم الطلب: '+order.id)}
+    function downloadDemo(item){const text='هذا ملف تجريبي للمنتج: '+item.name+'\nأضف الملف الرقمي الحقيقي إلى التطبيق لتمكين التنزيل الفعلي.';const link=document.createElement('a');link.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));link.download=item.file||'digital-product.txt';link.click();URL.revokeObjectURL(link.href)}
+    function renderStore(){const found=products.filter(p=>String(p.name||'').includes(search)||String(p.category||'').includes(search));return `<section class="hero"><h1>متجر المنتجات الرقمية والحلول التقنية</h1><p class="muted small">ادفع يدوياً عبر الكريمي واستلم ملفاتك بعد اعتماد الطلب</p><input class="search" placeholder="ابحث عن كتاب، قالب، أو حزمة..." value="${esc(search)}" oninput="search=this.value;render()"></section><section class="grid">${found.length?found.map(p=>`<article class="card product"><div><span class="pill">${esc(p.category||'رقمي')}</span><h3>${esc(p.name)}</h3><p>${esc(p.desc||'')}</p></div><div class="product-foot"><span class="price">${money(p.price)}</span><button class="primary" onclick="addToCart('${esc(p.id)}')">أضف للسلة</button></div></article>`).join(''):'<div class="empty">لا توجد منتجات مطابقة لبحثك.</div>'}</section>`}
+    function renderCart(){if(!cart.length)return '';const total=cart.reduce((sum,item)=>sum+Number(item.price||0),0);return `<aside class="cart"><div class="cart-head"><strong>سلة المشتريات (${cart.length})</strong><strong class="price">${money(total)}</strong></div><div class="cart-items">${cart.map((item,i)=>`<div class="cart-row"><span>${esc(item.name)}</span><button class="danger" onclick="removeFromCart(${i})">حذف</button></div>`).join('')}</div><div class="transfer"><strong style="color:#f9a8d4">تفاصيل تحويل الكريمي:</strong><br>حساب الكريمي: <span dir="ltr">770928719</span> / عبدالجليل السويدي</div><input id="receipt" class="field" placeholder="أدخل رقم إشعار التحويل المباشر..."><button class="primary green wide" onclick="checkout()">تأكيد الطلب والدفع اليدوي</button></aside>`}
+    function renderTracking(){const order=orders.find(o=>o.id===trackQuery.trim());return `<section class="card box"><h2>متابعة الطلب وتحميل الملفات</h2><input class="field" placeholder="أدخل رقم الطلب (مثال: RBT-1234)..." value="${esc(trackQuery)}" oninput="trackQuery=this.value;render()">${order?`<div class="order"><div class="order-head"><strong>${esc(order.id)}</strong><span class="status ${order.status==='approved'?'approved':''}">${order.status==='approved'?'مقبول (جاهز للتنزيل)':order.status==='rejected'?'مرفوض':'قيد المراجعة'}</span></div><p class="muted small">الإجمالي: ${money(order.total)}</p><div style="border-top:1px solid #1e293b;padding-top:8px">${(order.items||[]).map(item=>`<div class="item-line"><span>${esc(item.name)}</span>${order.status==='approved'?`<button class="download" onclick="downloadDemo(${JSON.stringify(item).replace(/</g,'\\u003c')})">تحميل</button>`: '<span class="muted">مغلق</span>'}</div>`).join('')}</div></div>`:trackQuery.trim()?'<p class="empty">لم يتم العثور على طلب بهذا الرقم.</p>':''}</section>`}
+    function renderAdmin(){if(!isAdmin)return `<section class="card box" style="max-width:360px;text-align:center;margin-top:45px"><h2>دخول الإدارة</h2><input id="adminPass" class="field" type="password" placeholder="كلمة مرور الإدارة"><button class="primary wide" onclick="loginAdmin()">دخول</button><p class="hint">نسخة تجريبية: كلمة المرور الافتراضية admin123. لا تستخدمها لحماية متجر حقيقي.</p></section>`;return `<section><div class="order-head" style="margin-bottom:16px"><h2>لوحة إدارة المتجر</h2><button class="danger" onclick="isAdmin=false;render()">خروج</button></div><div class="card"><h3 style="margin-top:0">الطلبات الواردة وإثباتات التحويل</h3>${orders.length?orders.map(o=>`<div class="order admin-order"><div><strong style="color:#f9a8d4">${esc(o.id)}</strong><div class="small muted">رقم الإشعار: ${esc(o.receipt)}</div><div class="price">${money(o.total)}</div><span class="status ${o.status==='approved'?'approved':''}">${o.status==='approved'?'معتمد':o.status==='rejected'?'مرفوض':'قيد المراجعة'}</span></div><div>${o.status==='pending'?`<button class="primary green" onclick="setOrderStatus('${esc(o.id)}','approved')">اعتماد الحوالة</button> <button class="secondary" onclick="setOrderStatus('${esc(o.id)}','rejected')">رفض</button>`:''}</div></div>`).join(''):'<p class="muted small">لا توجد طلبات بعد.</p>'}</div><p class="hint">البيانات محفوظة على هذا الجهاز فقط؛ لن تظهر الإدارة أو الطلبات على أجهزة أخرى.</p></section>`}
+    function loginAdmin(){if(document.getElementById('adminPass').value==='admin123'){isAdmin=true;render()}else notify('كلمة المرور خاطئة')}
+    function setOrderStatus(id,status){orders=orders.map(o=>o.id===id?{...o,status}:o);save();render()}
+    function render(){document.getElementById('main').innerHTML=view==='store'?renderStore():view==='tracking'?renderTracking():renderAdmin();document.getElementById('cartRoot').innerHTML=view==='store'?renderCart():''}
+    render();
+  </script>
+</body>
+</html>
