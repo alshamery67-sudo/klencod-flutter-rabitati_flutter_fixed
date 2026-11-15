@@ -1,0 +1,33 @@
+name: Check independent store backend
+on:
+  push:
+    branches: [ independent-alshamery-store ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  backend-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r server/requirements.txt
+      - name: Compile Python
+        run: python -m compileall -q server
+      - name: Smoke test routes and database
+        working-directory: server
+        env:
+          DATA_DIR: /tmp/alshamery-test-data
+          SECRET_KEY: test-secret-not-for-production
+          ADMIN_USERNAME: testadmin
+          ADMIN_PASSWORD: test-password-12345
+        run: |
+          python - <<'PY'
+          import app
+          client = app.app.test_client()
+          assert client.get('/').status_code == 200
+          assert client.get('/admin/login').status_code == 200
+          assert client.get('/track').status_code == 200
+          print('Backend smoke tests passed')
+          PY
