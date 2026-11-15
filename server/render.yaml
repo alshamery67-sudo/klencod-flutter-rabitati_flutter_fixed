@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: alshamery-digital-store
+    runtime: python
+    rootDir: server
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 1 --threads 4 --timeout 120
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATA_DIR
+        value: /var/data
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: PAYMENT_NAME
+        value: الكريمي
+      - key: PAYMENT_ACCOUNT
+        sync: false
+      - key: PAYMENT_HOLDER
+        sync: false
+      - key: SUPPORT_PHONE
+        sync: false
+    disk:
+      name: alshamery-store-data
+      mountPath: /var/data
+      sizeGB: 1
